@@ -13,6 +13,7 @@ let authorization = (function () {
     }
 
     function register(username, password, repeatPassword) {
+        username = username.trim();
         if (username.length < 5){
             notifications.showError('Username should be at least 5 symbols long.');
             return;
