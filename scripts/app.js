@@ -4,7 +4,7 @@ $(() => {
     const app = Sammy('#main', function () {
         this.use('Handlebars', 'hbs');
 
-        this.get('index.html', (ctx) => ctx.redirect('#/login'));
+        this.get('/index.html', (ctx) => ctx.redirect('#/login'));
         this.get('#/register', controllers.registerPageControllers.loadPage);
         this.post('#/register', controllers.registerPageControllers.registerUser);
         this.get('#/logout', controllers.logoutController.logoutUser);
