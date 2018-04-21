@@ -184,4 +184,6 @@ header>*, footer>* {
 }
 .btn-delete-chirp{
     float: right;
+    text-decoration: none;
+    margin-left: 10px;
 }
