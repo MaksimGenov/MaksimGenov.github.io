@@ -1,0 +1,10 @@
+<article class="chirp">
+    <div class="titlebar">
+        <a href="#/user/:{{_acl.creator}}" class="chirp-author">{{author}}</a>
+        <span class="chirp-time">{{calcTime _kmd.ect}}</span>
+        {{#if (isMyChirp this)}}
+            <a class="btn-delete-chirp" href="#/deleteChirp/:{{_id}}">delete</a>
+        {{/if}}
+    </div>
+    <p>{{text}}</p>
+</article>

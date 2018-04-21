@@ -1,0 +1,29 @@
+{{> header}}
+
+{{#if loggedIn}}
+    {{> nav}}
+{{/if}}
+
+<section id="viewFeed">
+    <div class="content">
+        <div class="chirper">
+
+            <h2 class="titlebar">{{username}}</h2>
+
+            {{> chirp-create-form}}
+
+            <div id="userStats" class="user-details">
+               {{> user-stats}}
+            </div>
+        </div>
+        <div id="chirps" class="chirps"><h2 class="titlebar">Chirps</h2>
+
+            {{#each chirps}}
+                {{> chirp}}
+            {{/each}}
+
+        </div>
+    </div>
+</section>
+
+{{> footer}}
