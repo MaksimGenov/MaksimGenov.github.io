@@ -3,7 +3,7 @@ controllers.logoutController = (function () {
     function logoutUser(ctx) {
         authorization.logout();
         sessionStorage.clear();
-        ctx.redirect("#/index");
+        ctx.redirect("/");
         notifications.showInfo('Logout successful.');
     }
 
